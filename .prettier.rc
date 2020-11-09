@@ -1,0 +1,18 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "filepath": "./src/**/*.tsx",
+  "semi": true,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "jsxSingleQuote": true,
+  "parser": "typescript",
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss"
+      }
+    }
+  ]
+}

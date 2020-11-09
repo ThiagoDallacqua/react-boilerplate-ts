@@ -1,0 +1,75 @@
+{
+  "name": "rocketcart",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged",
+    "lint": "npm run tslint && npm run stylelint",
+    "tslint": "tslint -c tslint.json \"src/app/**/*.{ts,tsx}\"",
+    "stylelint": "stylelint \"src/app/**/*.scss\" --config .stylelintrc.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "CI=true npm run test"
+    }
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "eslint-plugin-testing-library": "^3.2.2",
+    "lint-staged": "^8.2.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.1",
+    "react-docgen-typescript": "^1.16.5",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.2.0",
+    "ts-import-plugin": "^1.6.6",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "tslint-react": "4.0.0",
+    "tslint-react-hooks": "2.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
